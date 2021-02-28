@@ -1,1 +1,464 @@
-<h1>this is the contacts or sponcers page</h1>..
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jai shree ganesh </title>
+    <style>
+        .container {
+            /* border: 2px solid  black; */
+            height: 40vw;
+            background-color: rgb(87, 87, 87);
+        }
+
+        .container1 {
+            /* border: 2px solid black ; */
+            height: 40vw;
+            position: relative;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: row-reverse;
+
+            align-items: center;
+            width: 70%;
+        }
+
+        .cont2 {
+            position: relative;
+            display: flex;
+            /* border: 2px solid green; */
+            background-color: rgb(0, 0, 0);
+            width: 35vw;
+            height: 24vw;
+            left: 25%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: 1.5vw 1.5vw 2vw #000;
+
+        }
+
+        #box1 {
+            color: blue;
+            font-size: 3vw;
+            /* border: 2px solid red; */
+            width: 40vw;
+            height: 30vw;
+            position: absolute;
+            left: 10%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #box1a {
+            font-size: 3vw;
+            /* border:2px solid red; */
+            width: 40vw;
+            height: 5vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        #box1b {
+            /* border:2px solid blue; */
+            width: 40vw;
+            height: 15vw;
+            color: white;
+            font-size: 2vw;
+            /* margin-top: 2vw; */
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        #box1c {
+            /* border:2px solid blue; */
+            width: 40vw;
+            height: 10vw;
+            color: white;
+            font-size: 2vw;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        button {
+            background-color: blue;
+            width: 22vw;
+            height: 2.5vw;
+            border: 0px solid black;
+            border-radius: 0px;
+            font-size: 1.5vw;
+        }
+
+        .title-bar {
+            /* border: 2px solid red; */
+            height: 1.5vw;
+            margin-top: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5vw;
+        }
+
+        .sponser-box {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+        }
+
+        .flip-card {
+            margin: 2vw;
+            background-color: transparent;
+            width: 20vw;
+            height: 14vw;
+            /* perspective: 1000px; */
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #000000;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .hoverbox {
+            /* margin: 2vw; */
+            background-color: transparent;
+            width: 35vw;
+            height: 24vw;
+            /* perspective: 1000px; */
+        }
+
+        .hoverbox-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .hoverbox:hover .hoverbox-inner {
+            transform: rotateX(180deg);
+            transform-origin: left;
+        }
+
+        .hoverbox-front,
+        .hoverbox-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .hoverbox-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .hoverbox-back {
+            background-color: #3b3434;
+            color: white;
+            transform: rotateX(180deg);
+            transform-origin: left;
+        }
+
+        #wrapper {
+            /* background: #555555; */
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #wrapper * {
+            margin: 5px;
+        }
+
+        .heading {
+            font-size: 3em;
+            padding: 10px 5px;
+        }
+
+        /* .caption {
+  font-size: 1em;
+  padding: 5px;
+  font-family: Courier;
+} */
+
+        .animatable {
+            font-size: 3vw;
+            position: relative;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            animation: .75s cubic-bezier(1, -0.01, .12, .8) 1s 1 reveal forwards;
+        }
+
+        .animatable::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(87, 87, 87);
+            padding: inherit;
+            animation: .75s cubic-bezier(1, -0.01, .12, .8) 1.75s 1 hideBlack forwards;
+        }
+
+        @keyframes reveal {
+            from {
+                clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            }
+
+            to {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        @keyframes hideBlack {
+            from {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            to {
+                clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+
+            <div class="cont2">
+                <div class="hoverbox">
+                    <div class="hoverbox-inner">
+                        <div class="hoverbox-front">
+                            <img src="images/aa_edited.jpg" alt="honda" style="width:35vw;height:24vw;">
+                        </div>
+                        <div class="hoverbox-back" style="width: 35vw; height: 24vw;">
+                            <h1>HONDA</h1>
+                            <div>
+                                <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate
+                                    corporation
+                                    primarily known as a manufacturer of automobiles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="box1">
+                <div id="box1a">
+                    <div id="wrapper">
+                        <div class="heading animatable">Special thanks to our sponsers!</div>
+                        <!-- <div class="caption animatable">I am a person.</div> -->
+                    </div>
+                </div>
+                <div id="box1b">
+                    <div id="wrapper">
+                        <div class="heading animatable" style="font-size: 2vw;">We are really very grateful as well as obliged to thank our
+                            sponsers that they actually
+                            save our very event just by their very support that they actually extended in the very form
+                            of
+                            sponsership.</div>
+                        <!-- <div class="caption animatable">I am a person.</div> -->
+                    </div>
+                </div>
+                <div id="box1c"> <button type="submit">
+                        <link rel="stylesheet" href="login.html"> Become a sponser
+                    </button></div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <hr style="margin-top: 20px;">
+    <div class="title-bar"> OUR SPONSERS </div>
+    <hr style="width: 20vw;">
+
+    <div class="sponser-box">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/honda.jpg" alt="honda" style="width:20vw;height:14vw;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>HONDA</h1>
+                    <div style="margin: 25px;">
+                        <p>The Honda Motor Company, Ltd. is a Japanese public multinational conglomerate corporation
+                            primarily known as a manufacturer of automobiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="heading animatable">Hi, I am Richard!</div>
+        <div class="caption animatable">I am a person.</div>
+    </div>
+
+</body>
+
+</html>
